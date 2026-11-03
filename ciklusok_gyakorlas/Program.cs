@@ -112,6 +112,17 @@ namespace ciklusok_gyakorlas
             {
                 num5 = Convert.ToUInt16(Console.ReadLine());
             } while (num5 != 0);
+
+            // 6. feladat
+            // Készítsen programot, ami számokat kér be mindaddig, amíg az utolsó két szám meg nem egyezik!
+            Console.WriteLine("6. feladat");
+            ushort num6 = 0, tmp;
+        get_tmp: tmp = Convert.ToUInt16(Console.ReadLine());
+            if (tmp != num6)
+            {
+                num6 = tmp;
+                goto get_tmp;
+            }
         }
     }
 }

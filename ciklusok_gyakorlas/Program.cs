@@ -77,6 +77,32 @@ namespace ciklusok_gyakorlas
                 Console.WriteLine("Prímszám");
             else
                 Console.WriteLine("Nem prímszám");
+
+            // 4. feladat
+            // Kérjünk be egy mobil telefonszámot (06, +36 utáni részt), és csak akkor fogadjuk el, ha az valóban mobilszám!
+            //  Írjuk ki, hogy a szám melyik szolgáltatóhoz tartozik! (20 - Yettel, 30 - Telekom, 70 - Vodafone)
+            Console.WriteLine("4. feladat");
+            string phone_number;
+            ushort provider_num;
+            Console.Write("Adja meg a telefonszámot (xx/xxxxxxx): ");
+            phone_number = Console.ReadLine();
+            provider_num = (ushort)((phone_number[0] - '0') * 10);
+            provider_num += (ushort)(phone_number[1] - '0');
+            switch (provider_num)
+            {
+                case 20:
+                    Console.WriteLine("Yettel");
+                    break;
+                case 30:
+                    Console.WriteLine("Telekom");
+                    break;
+                case 70:
+                    Console.WriteLine("Vodafone");
+                    break;
+                default:
+                    Console.WriteLine("Ismeretlen szolgáltató");
+                    break;
+            }
         }
     }
 }

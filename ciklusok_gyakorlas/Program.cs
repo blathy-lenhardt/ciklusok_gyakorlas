@@ -123,6 +123,28 @@ namespace ciklusok_gyakorlas
                 num6 = tmp;
                 goto get_tmp;
             }
+
+            // 7. feladat
+            /* Készítsen számkitaláló programot! A gép véletlenszerűen találjon ki egy számot 1 és 100 között!
+             *  A felhasználótól kérjen be tippeket, és mondja meg, hogy a gondolt szám a tipptől nagyobb-e vagy kisebb!
+             *  A tippelés addig megy, amíg a felhasználó el nem találta a megadott számot.
+             */
+            Console.WriteLine("7. feladat");
+            ushort random_num = (ushort)rand.Next(1, 101);
+            ushort guess;
+            uint guesses = 0;
+        guess: Console.Write("Adj meg egy számot: ");
+            guess = Convert.ToUInt16(Console.ReadLine());
+            guesses++;
+            if (guess != random_num)
+            {
+                if (guess < random_num)
+                    Console.WriteLine("A gondolt szám nagyobb mint a(z) {0}", guess);
+                else
+                    Console.WriteLine("A gondolt szám kisebb mint a(z) {0}", guess);
+                goto guess;
+            }
+            Console.WriteLine("Kitaláltad {0} tippből, a megoldás {1}", guesses, random_num);
         }
     }
 }

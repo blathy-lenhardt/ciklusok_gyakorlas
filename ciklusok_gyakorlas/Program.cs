@@ -151,6 +151,20 @@ namespace ciklusok_gyakorlas
 			Console.WriteLine("8. feladat");
 			for (int i = 1; i <= 20; i++)
 				Console.WriteLine("{0}, {1}", i, Math.Pow(i, 2));
+
+			// 9. feladat
+			// Számítsa ki a gép 10 véletlen szám összegét, szorzatát, átlagát és írjuk ki a képernyőre!
+			Console.WriteLine("9. feladat");
+			int osszeg = 0, szorzat = 1, tmp9;
+			double atlag;
+			for (int i = 0; i < 10; i++)
+			{
+				tmp9 = rand.Next(-2147483648, 2147483647);
+				osszeg += tmp9;
+				szorzat *= tmp9;
+			}
+			atlag = osszeg / 10;
+			Console.WriteLine("Összeg: {0}\nSzorzat: {1}\nÁtlag: {2:0.00}", osszeg, szorzat, atlag);
 		}
 	}
 }

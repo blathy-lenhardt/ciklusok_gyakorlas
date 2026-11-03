@@ -38,6 +38,45 @@ namespace ciklusok_gyakorlas
                 Console.WriteLine();
             }
             Console.WriteLine("{0}db pozitív szám van.", positives);
+
+            // 3. feladat
+            /* Kérjünk be egy számot és írjuk ki, hogy az prímszám-e vagy sem!
+                Az algoritmus hatékony alakja: 
+                    Be: szam
+                    prim := igaz
+                    Ha ((szam < 2) vagy (szam MOD 2 = 0)) és (szam <> 2) akkor prim := hamis
+                    különben
+                        i := 3
+                        Ciklus amíg ((i <= gyök(szam)) és (prim = igaz))
+                            Ha (szam MOD i = 0) akkor prim = hamis
+                                i = i + 2
+                        Ciklus vége
+                    Elágazás vége
+                    Ha (prim = igaz) akkor Ki: "prímszám"
+                           különben Ki: "nem prímszám"
+                    Elágazás vége
+            */
+            Console.WriteLine("3. feladat");
+            int szam;
+            bool prim = true;
+            Console.Write("Adjon meg egy számot: ");
+            szam = Convert.ToInt32(Console.ReadLine());
+            if (((szam < 2) || (szam % 2 == 0)) && (szam != 2))
+                prim = false;
+            else
+            {
+                int i = 3;
+                while ((i <= Math.Sqrt(szam)) && (prim == true))
+                {
+                    if (szam % i == 0)
+                        prim = false;
+                    i += 2;
+                }
+            }
+            if (prim)
+                Console.WriteLine("Prímszám");
+            else
+                Console.WriteLine("Nem prímszám");
         }
     }
 }

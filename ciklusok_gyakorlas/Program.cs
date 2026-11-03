@@ -165,6 +165,14 @@ namespace ciklusok_gyakorlas
 			}
 			atlag = osszeg / 10;
 			Console.WriteLine("Összeg: {0}\nSzorzat: {1}\nÁtlag: {2:0.00}", osszeg, szorzat, atlag);
+
+			// 10. feladat
+			// Készítsen programot, amely addig kér be számokat, amíg -30 és 40 közé nem esik egy szám!
+			Console.WriteLine("10. feladat");
+			short input;
+	tizesfeladat:	input = Convert.ToInt16(Console.ReadLine());
+			if (input >= 40 || input <= -30)
+				goto tizesfeladat;
 		}
 	}
 }

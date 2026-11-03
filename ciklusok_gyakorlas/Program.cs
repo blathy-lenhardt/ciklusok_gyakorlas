@@ -117,7 +117,7 @@ namespace ciklusok_gyakorlas
 			// Készítsen programot, ami számokat kér be mindaddig, amíg az utolsó két szám meg nem egyezik!
 			Console.WriteLine("6. feladat");
 			ushort num6 = 0, tmp;
-		get_tmp: tmp = Convert.ToUInt16(Console.ReadLine());
+		get_tmp:tmp = Convert.ToUInt16(Console.ReadLine());
 			if (tmp != num6)
 			{
 				num6 = tmp;
@@ -133,7 +133,7 @@ namespace ciklusok_gyakorlas
 			ushort random_num = (ushort)rand.Next(1, 101);
 			ushort guess;
 			uint guesses = 0;
-		guess: Console.Write("Adj meg egy számot: ");
+		guess:	Console.Write("Adj meg egy számot: ");
 			guess = Convert.ToUInt16(Console.ReadLine());
 			guesses++;
 			if (guess != random_num)
@@ -145,6 +145,12 @@ namespace ciklusok_gyakorlas
 				goto guess;
 			}
 			Console.WriteLine("Kitaláltad {0} tippből, a megoldás {1}", guesses, random_num);
+
+			// 8. feladat
+			// Írassa ki a számokat 1-től 20-ig és mellé a négyzetüket is!
+			Console.WriteLine("8. feladat");
+			for (int i = 1; i <= 20; i++)
+				Console.WriteLine("{0}, {1}", i, Math.Pow(i, 2));
 		}
 	}
 }

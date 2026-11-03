@@ -103,6 +103,15 @@ namespace ciklusok_gyakorlas
                     Console.WriteLine("Ismeretlen szolgáltató");
                     break;
             }
+
+            // 5. feladat
+            // Készítsen programot, ami számokat kér be mindaddig, amíg 0-át nem adunk meg!
+            Console.WriteLine("5. feladat");
+            ushort num5;
+            do
+            {
+                num5 = Convert.ToUInt16(Console.ReadLine());
+            } while (num5 != 0);
         }
     }
 }
